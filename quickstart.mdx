@@ -1,0 +1,145 @@
+---
+title: Quick Start Guide
+description: Get up and running with HYPR in just a few minutes, from account setup to creating your first documentation space.
+---
+
+## Overview
+
+HYPR makes it easy to build and manage your documentation. Follow these steps to create your account, set up a workspace, and import your first content. You will have a live documentation site ready in under 5 minutes.
+
+<Columns cols={3}>
+  <Card title="Create Account" icon="user-plus" href="#create-account">
+    Sign up securely in seconds.
+  </Card>
+  <Card title="Set Up Workspace" icon="settings" href="#setup-workspace">
+    Customize your documentation space.
+  </Card>
+  <Card title="Import Content" icon="upload" href="#import-content">
+    Bring in your Markdown or GitHub repo.
+  </Card>
+</Columns>
+
+## Create Your Account
+
+Start by signing up for HYPR. You need an email address and password.
+
+<Steps>
+  <Step title="Visit HYPR" icon="globe">
+    Go to `https://app.hyprdocs.com` and click **Sign Up**.
+  </Step>
+  <Step title="Enter Details" icon="edit-3">
+    Provide your email, create a strong password, and verify your email.
+  </Step>
+  <Step title="Complete Setup" icon="check-circle">
+    Accept the terms and access your dashboard.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Use a business email for team invites later. You can upgrade to a paid plan anytime from the dashboard.
+</Callout>
+
+## Set Up Your Workspace
+
+Create a new documentation space for your project.
+
+<Tabs>
+  <Tab title="New Space" icon="plus">
+    From the dashboard, click **New Workspace**.
+
+    1. Enter a name like `My Project Docs`.
+    2. Choose a subdomain such as `myproject.hyprdocs.com`.
+    3. Select a theme or use the default blue (`#3B82F6`).
+
+    Your workspace is ready to publish.
+  </Tab>
+  <Tab title="Team Workspace" icon="users">
+    Invite team members during setup.
+
+    Add emails in the **Team** section. They receive invite links.
+  </Tab>
+</Tabs>
+
+## Import Initial Content
+
+Populate your workspace with content. HYPR supports Markdown files, GitHub repos, and direct uploads.
+
+<Tabs>
+  <Tab title="GitHub Repo" icon="github">
+    Connect your repo for automatic syncs.
+
+    <Steps>
+      <Step title="Authorize GitHub">
+        Click **Import from GitHub** and grant access.
+      </Step>
+      <Step title="Select Repo">
+        Choose `your-username/my-docs-repo`.
+      </Step>
+      <Step title="Configure Branch">
+        Set `main` as the default branch.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Markdown Upload" icon="upload-cloud">
+    Drag and drop files directly.
+
+    Create a folder structure like this:
+
+    ```mermaid
+    graph TD
+        A[Workspace Root] --> B[docs]
+        B --> C[quickstart.mdx]
+        B --> D[introduction.mdx]
+        A --> E[public]
+        E --> F[image.png]
+    ```
+
+    Upload your `README.md` as the homepage.
+  </Tab>
+</Tabs>
+
+<CodeGroup tabs="Markdown,JSON Config">
+```markdown
+# Welcome to My Docs
+
+## Quick Start
+
+Follow the [guide](/quickstart) to get started.
+
+> This site is powered by HYPR.
+```
+
+```json
+{
+  "title": "My Project",
+  "brandColor": "#3B82F6",
+  "sidebar": [
+    { "title": "Home", "href": "/" },
+    { "title": "Quickstart", "href": "/quickstart" }
+  ]
+}
+```
+</CodeGroup>
+
+## Next Steps
+
+Publish your site and share it.
+
+<Expandable title="Troubleshooting Common Issues" default-open="false">
+  - **Import fails?** Check GitHub permissions.
+  - **Build errors?** Ensure MDX files use valid syntax.
+  - **Custom domain?** Add it in workspace settings after publishing.
+</Expandable>
+
+<Columns cols={2}>
+  <Card title="Publish Site" icon="globe" href="/docs/publishing">
+    Make your docs live with one click.
+  </Card>
+  <Card title="Customize Theme" icon="palette" href="/docs/themes">
+    Match your brand with custom colors and logos.
+  </Card>
+</Columns>
+
+<Callout kind="success">
+  Congratulations! Your first HYPR documentation space is ready. Explore the dashboard to add more pages and collaborate with your team.
+</Callout>
