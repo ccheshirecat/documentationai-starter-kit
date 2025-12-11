@@ -1,6 +1,6 @@
 {
     "name": "hypr Documentation",
-    "initialRoute": "introduction",
+    "initialRoute": "index",
     "colors": {
         "light": {
             "brand": "#dedede",
